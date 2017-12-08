@@ -16,7 +16,7 @@ RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/re
     rm -rf /var/cache/apk/* && \
     pip install --upgrade pip && \
     pip install --upgrade setuptools && \
-    pip2 install incremental constantly packaging automat service_identity py2-mako && \
+    pip2 install incremental constantly packaging automat service_identity prettytable && \
     chmod +x /usr/local/bin/start
 
 CMD ["/usr/local/bin/start"]
