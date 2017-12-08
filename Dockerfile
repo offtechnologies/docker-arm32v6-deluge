@@ -11,7 +11,7 @@ RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/re
     && apk add --no-cache \
     bash \
     py-pip \
-    deluge=${DELUGE_VERSION}@testing && \
+    deluge@testing=${DELUGE_VERSION} && \
     rm -rf /var/cache/apk/* && \
     pip install --upgrade pip && \
     pip install --upgrade setuptools && \
