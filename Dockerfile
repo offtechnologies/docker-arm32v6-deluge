@@ -11,11 +11,12 @@ RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/re
     && apk add --no-cache \
     bash \
     py-pip \
+    python-mako \
     deluge@testing=${DELUGE_VERSION} && \
     rm -rf /var/cache/apk/* && \
     pip install --upgrade pip && \
     pip install --upgrade setuptools && \
-    pip2 install incremental constantly packaging automat service_identity python-mako && \
+    pip2 install incremental constantly packaging automat service_identity && \
     chmod +x /usr/local/bin/start
 
 CMD ["/usr/local/bin/start"]
