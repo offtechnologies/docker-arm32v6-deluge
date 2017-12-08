@@ -1,0 +1,9 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: offtechnologies/docker-arm32v6-deluge
+    registry: docker.io
+    tags:
+      - latest
+      - 9.11.2
+    secrets: [ docker_username, docker_password ]
