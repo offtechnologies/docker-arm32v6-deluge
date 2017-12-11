@@ -5,5 +5,7 @@ if ! [ -d /torrents/.state ];then
   mkdir /torrents/.state;
 fi
 
+rm -f /data/deluged.pid
+
 /usr/bin/deluged -c /config
 exec /usr/bin/deluge-web -c /config
